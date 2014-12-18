@@ -374,7 +374,7 @@
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/gtm-http-fetcher\"",
 					"\"${PODS_ROOT}/Headers/Public/gtm-oauth2\"",
-					"\"/Users/demosten/work/iPhone/tests/GMail Test/Libs/google-api-objectivec-client\"/**",
+					"\"Libs/google-api-objectivec-client\"/**",
 				);
 				INFOPLIST_FILE = "GMail Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -395,7 +395,7 @@
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/gtm-http-fetcher\"",
 					"\"${PODS_ROOT}/Headers/Public/gtm-oauth2\"",
-					"\"/Users/demosten/work/iPhone/tests/GMail Test/Libs/google-api-objectivec-client\"/**",
+					"\"Libs/google-api-objectivec-client\"/**",
 				);
 				INFOPLIST_FILE = "GMail Test/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
