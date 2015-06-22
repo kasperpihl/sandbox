@@ -73,9 +73,9 @@ static NSString* const kKeychainKeyName = @"gmail_test_gmail";
         if (object) {
             for (GTLGmailLabel* label in object.labels) {
 //                NSLog(@"label: %@", label);
-                if (NSOrderedSame == [label.name caseInsensitiveCompare:@"Swipes"]) {
+                if (NSOrderedSame == [label.name caseInsensitiveCompare:@"[Mailbox]/Swipes"]) {
                     _swipesLabelId = label.identifier;
-                    [self listMessages:@"after:2014/12/01"];
+                    [self listMessages:nil];
                     hasSwipes = YES;
                     break;
                 }
@@ -84,7 +84,7 @@ static NSString* const kKeychainKeyName = @"gmail_test_gmail";
         if (!hasSwipes) {
             GTLQueryGmail* createLabel = [GTLQueryGmail queryForUsersLabelsCreate];
             GTLGmailLabel* label = [[GTLGmailLabel alloc] init];
-            label.name = @"Swipes";
+            label.name = @"[Mailbox]/Swipes";
             label.labelListVisibility = @"labelShow";
             label.messageListVisibility = @"show";
             createLabel.label = label;
