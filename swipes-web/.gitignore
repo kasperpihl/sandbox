@@ -1,0 +1,15 @@
+.dist
+.tmp
+.sass-cache
+.DS_Store
+rethinkdb_data
+cloud/public
+npm-debug.log
+node_modules*
+public
+app/scripts/js
+*.httpclient
+*.sublime-project
+*.sublime-workspace
+bower_components*
+app/bower_components*

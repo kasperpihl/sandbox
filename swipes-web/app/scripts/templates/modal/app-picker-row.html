@@ -1,0 +1,13 @@
+<% if(data.apps && data.apps.length) { %>
+	<div class="assign-scroll-container">
+		<ul class="apps-list">
+		<% _.each( data.apps, function(app){  %>
+			<li class="app row" data-href="<%= app.id %>">
+				<%= app.name %>
+			</li>
+		<% }); %>
+		</ul>
+	</div>
+<% } else{ %>
+	<div class="message"><%= data.emptyMessage %></div>
+<% } %>

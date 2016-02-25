@@ -1,0 +1,173 @@
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" manifest="manifest.appcache"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Swipes</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<!-- build:css(.tmp) styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- endbuild -->
+	<link rel="apple-touch-icon" href="styles/img/touch-icon-iphone.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="styles/img/touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="styles/img/touch-icon-iphone-retina.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="styles/img/touch-icon-ipad-retina.png" />
+
+	<script>
+
+		/*if (window.liveEnvironment && window.location.protocol != "https:")
+			window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);*/
+		if (window.process != null && process.versions['electron'] && window.require) {
+			console.log("removing node");
+			window.nodeRequire = window.require;
+			delete window.require;
+		}
+	</script>
+	<script type="text/javascript">
+        if (window.process != null){
+        	if(process.versions['electron']) {
+            	window.$ = window.jQuery = nodeRequire('jquery');
+        	}
+        }
+    </script>
+	<!-- build:js scripts/vendor/modernizr.js -->
+	<script src="bower_components/modernizr/modernizr.js"></script>
+	<!-- endbuild -->
+</head>
+
+<body class="loading">
+	<!--(bake styles/icon-font/svgdefs.svg)-->
+
+	<!--[if lt IE 10]>
+	<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+	<aside class="sidebar left sub-opened">
+		<div class="sidebar_content">
+
+			<div class="sidebar-controls ">
+				<div id="sidebar-apps-list" class="sidebar-section">
+					<h1 class="title">MY APPS</h1>
+					<a class="add-button">
+						<svg class="icon">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-materialAdd"></use>
+						</svg>
+					</a>
+					<ul class="apps">
+						<li class="row"><a><span class="text">Loading...</span></a></li>
+
+					</ul>
+					<a href="#" class="more-button more-button-apps"></a>
+				</div>
+				<div id="sidebar-project-list" class="sidebar-section">
+					<h1 class="title">GROUPS</h1>
+					<a class="add-button">
+						<svg class="icon">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-materialAdd"></use>
+						</svg>
+					</a>
+					<ul class="projects">
+						<li class="row"><a><span class="text">Loading...</span></a></li>
+					</ul>
+					<a href="#" class="more-button more-button-channel"></a>
+				</div>
+				<div id="sidebar-members-list" class="sidebar-section">
+					<h1 class="title">PEOPLE</h1>
+					<a class="add-button">
+						<svg class="icon">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-materialAdd"></use>
+						</svg>
+					</a>
+					<ul class="team-members">
+						<li class="row"><a><span class="text">Loading...</span></a></li>
+					</ul>
+					<a href="#" class="more-button more-button-dm"></a>
+				</div>
+			</div>
+		</div><!-- content -->
+	</aside><!-- sidebar -->
+
+	<div class="right-side-container">
+
+		<div class="content-container" id="main">
+			<div id="app-view-controller-1" class="app-view-controller">
+				<div class="top-bar-container navigation-foreground-light navigation-boxshadow">
+					<div class="menu-icon-container">
+						<div class="menu-icon open"></div>
+					</div>
+					<!--<h1 class="title"></h1> -->
+					<ul class="swipes-dropdown">
+						<li class="init"></li>
+						<i class="material-icons dropdown-arrow">keyboard_arrow_down</i>
+						<li data-value="Option 1">Option 1</li>
+						<li data-value="Option 2">Option 2</li>
+						<li data-value="Option 3">Option 3</li>
+						<li data-value="Option 4">Option 4</li>
+						<li data-value="Option 5">Option 5</li>
+						<li data-value="Option 6">Option 6</li>
+					</ul>
+					
+					<div class="icon-open-dual-view-container">
+						<div class="icon-open-dual-view">
+							<div class="box"></div>
+							<div class="box"></div>
+						</div>
+					</div>
+				</div>
+				<div class="app-content-container"></div>
+			</div>
+			<div id="app-view-controller-2" class="app-view-controller">
+				<div class="top-bar-container navigation-foreground-light navigation-boxshadow">
+					<h1 class="title"></h1>
+					
+					<div class="icon-close-dual-view-container">
+						<div class="icon-close-dual-view">
+							<div class="box"></div>
+							<div class="box"></div>
+						</div>
+					</div>
+				</div>
+				<div class="app-content-container"></div>
+			</div>
+			<div class="load-indicator">
+				<div class="spinner">
+					<div class="bounce1"></div>
+					<div class="bounce2"></div>
+					<div class="bounce3"></div>
+				</div>
+			</div>
+
+		</div>
+		
+
+	</div><!-- .content-container -->
+	<div class="modal-overlay-container">
+		<div class="modal-clickable-background"></div>
+		<div class="modal-overlay-content">
+			<!-- Modal's get inserted here! -->
+		</div>
+	</div>
+
+	<div class="lightbox-overlay">
+		<div class="close-container">
+			<div class="close"></div>
+		</div>
+		<div class="lightbox"></div>
+	</div>
+
+	<div class="drag-mouse-pointer">
+		<ul class="moved-items">
+		</ul>
+	</div>
+
+	<!-- build:js scripts/main.js -->
+	<script data-main="scripts/main" src="bower_components/requirejs/require.js"></script>
+	<!-- endbuild -->
+</body>
+</html>
