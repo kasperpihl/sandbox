@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Add to Swipes",
+  "version": "1.0",
+  "description": "Add tasks to Swipes",
+  "browser_action": {
+    "default_icon": {
+      "16": "icon-16.png",
+      "19": "icon-19.png",
+      "38": "icon-38.png",
+      "48": "icon-48.png",
+      "128": "icon-128png"
+    },
+    "default_popup": "html/popup.html",
+    "default_title":"Add to Swipes"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/vendor/jquery.js","scripts/vendor/portWrapper.js","content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://api.swipesapp.com/",
+    "https://api.parse.com/*"
+  ]
+}

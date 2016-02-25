@@ -1,0 +1,58 @@
+<html><head>
+    <title>Add to Swipes</title>
+    
+    <link href="../css/general.css" rel="stylesheet" type="text/css">
+    <link href="../css/popup.css" rel="stylesheet" type="text/css">
+    <script src="../scripts/vendor/jquery.js"></script>
+    <script src="../scripts/vendor/parse.js"></script>
+    <script src="../scripts/vendor/portWrapper.js"></script>
+    <script src="../scripts/popup.js"></script>
+  </head>
+  <body>
+    <div class="page loading-page hidden">
+      <div class="loading"></div>
+      <div class="load-message swipes-red">Adding to Swipes</div>
+    </div>
+    <div class="page success-page hidden">
+      <div class="logo">
+        <a href="http://swipesapp.com" target="_blank">
+          <div class="image"></div>
+        </a>
+        <h1>Successfully added</h1>
+      </div>
+    </div>
+
+    <div class="page login-page hidden">
+      
+      <div class="logo">
+        <a href="http://swipesapp.com" target="_blank">
+          <div class="image"></div>
+        </a>
+        <h1>Add to Swipes Plugin</h1>
+      </div>
+     
+      <div class="bottom">
+        <input type="text" value="" placeholder="Email" id="email-field"/>
+        <span class="login-error-message hidden"></span>
+        <input type="password" value="" placeholder="Password" id="password-field"/>
+        <button class="login-button red">
+          Login
+        </button>
+      </div>
+    </div>
+
+    <div class="page add-page hidden">
+      <textarea class="title-input" maxlength="255" type="text" placeholder="Add an item..."  tabindex="0"></textarea>
+      <textarea class="note-input" maxlength="10000" placeholder=" Add a note..." tabindex="0"></textarea>
+      <textarea class="url-input" maxlength="1000" placeholder="URL" tabindex="0"></textarea>
+      <div class="add-button-container">
+        <button class="red add-button" tabindex="0">
+          <span class="swipes-icon"></span>Add to Swipes
+        </button>
+      </div>
+      <div class="footer">
+        <a class="rate-link" href="http://web.swipesapp.com" target="_blank">Open Swipes</a>
+      </div>
+    </div>
+  
+</body></html>

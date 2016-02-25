@@ -1,0 +1,119 @@
+body {
+  height: 385px;
+  width: 260px;
+  background: #FAFAFA;
+}
+
+.login-page {
+  -webkit-animation: fade 300ms linear;
+}
+
+.loading-page .loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -45px 0 0 -15px;
+}
+.loading-page .load-message{
+  position:absolute;
+  top:50%;
+  font-family: 'Varela Round', sans-serif;
+  font-size:15px;
+  width:100%;
+  margin-top:0px;
+  text-align: center;
+}
+
+.login-page .logo {
+  padding-top: 30px;
+}
+.success-page .logo {
+  position: absolute;
+  width:100%;
+  top: 50%;
+  margin-top:-80px;
+}
+.success-page h1{
+  margin-top:20px;
+}
+
+.login-page .bottom {
+
+  padding: 28px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+a{
+  text-decoration: none;
+}
+a:visited{
+  text-decoration: none;
+}
+a:focus{
+  outline:none;
+}
+.login-page .bottom input#pass-field{
+  margin-bottom:10px;
+}
+.login-page .bottom .login-error-message{
+  color: red;
+  margin-left:12px;
+  font-style: italic;
+}
+.login-page .bottom button {
+  position: relative;
+}
+
+textarea, input {
+  -webkit-font-smoothing: antialiased;
+  background-color: transparent;
+  font-family: 'Varela Round', sans-serif;
+  border: 0;
+  width: 100%;
+  padding: 10px 14px;
+  display: block;
+  resize: none;
+  height: auto;
+  color: #5B5B5B;
+  outline:none;
+}
+
+.title-input {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+  min-height: 100px;
+
+}
+
+.note-input {
+  font-size: 14px;
+  line-height: 19px;
+  min-height: 150px;
+}
+
+.add-button-container {
+  padding: 14px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 0 #D7D7D7;
+}
+
+.add-button {
+  position: relative;
+}
+
+.footer {
+  padding: 6px 0;
+  text-align: center;
+}
+
+.footer a {
+  color: #5B5B5B;
+  text-decoration: none
+}
+
+.footer a:hover {
+  text-decoration: none;
+}
