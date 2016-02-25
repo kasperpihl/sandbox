@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (process.versions['electron']) {
+            window.$ = window.jQuery = require('jquery');
+        }
+    </script>
+  </head>
+  <body>
+    <script type="text/javascript">
+        function sendIPC() {
+            var ipc = require('ipc');
+            // console.log(ipc.sendSync('synchronous-message', 'ping')); // prints "pong"
+            //
+            // ipc.on('asynchronous-reply', function(arg) {
+            //   console.log(arg); // prints "pong"
+            // });
+            console.log('sending IPC');
+            ipc.send('newEvent', 'data');
+        }
+    </script>
+
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+        $("#msgid").html("This is Hello World by JQuery");
+    });
+
+    </script>
+    <h1>Hello World!</h1>
+    We are using io.js <script>document.write(process.version)</script>
+    and Electron <script>document.write(process.versions['electron'])</script>.
+    <button onclick="sendIPC()">IPC</button>
+
+    <div id="msgid">
+    </div>
+  </body>
+</html>
